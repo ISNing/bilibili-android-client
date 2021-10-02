@@ -1,202 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="com.hotbitmapgg.ohmybilibili"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
 
     <supports-screens
-        android:anyDensity="true"
-        android:largeScreens="true"
-        android:normalScreens="false"
-        android:resizeable="true"
-        android:smallScreens="true" />
+            android:anyDensity="true"
+            android:largeScreens="true"
+            android:normalScreens="false"
+            android:resizeable="true"
+            android:smallScreens="true"/>
 
     <!-- 用户权限设置 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
 
     <application
-        android:name="com.hotbitmapgg.bilibili.BilibiliApp"
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+            android:name="com.hotbitmapgg.bilibili.BilibiliApp"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+    android:usesCleartextTraffic="true">
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.common.SplashActivity"
-            android:theme="@style/ColorTranslucentTheme">
+                android:name="com.hotbitmapgg.bilibili.module.common.SplashActivity"
+                android:theme="@style/ColorTranslucentTheme"
+                android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
 
         <!-- 主界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.common.MainActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/MainActivityColorTranslucentTheme"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+                android:name="com.hotbitmapgg.bilibili.module.common.MainActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait"
+                android:theme="@style/MainActivityColorTranslucentTheme"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+                android:exported="true"/>
 
 
         <!-- 登录界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.common.LoginActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.common.LoginActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!-- APP简介界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.common.AppIntroduceActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.common.AppIntroduceActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!-- 浏览器界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.common.BrowserActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.common.BrowserActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!-- 视频详情界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.video.VideoDetailsActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.video.VideoDetailsActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!-- 用户详情界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.user.UserInfoDetailsActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.user.UserInfoDetailsActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!-- 专题详情界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.home.bangumi.SpecialDetailsActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.home.bangumi.SpecialDetailsActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!-- 分区详情界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.home.region.RegionTypeDetailsActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.home.region.RegionTypeDetailsActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!-- 番剧时间表界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.home.bangumi.BangumiScheduleActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.home.bangumi.BangumiScheduleActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
         <!--追番界面-->
 
 
         <!-- 游戏中心界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.entry.GameCentreActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.entry.GameCentreActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
         <!-- 离线缓存界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.entry.OffLineDownloadActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.entry.OffLineDownloadActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!-- 直播详情界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.home.live.LivePlayerActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.home.live.LivePlayerActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!-- 番剧索引界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.home.bangumi.BangumiIndexActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.home.bangumi.BangumiIndexActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
         <!-- 关于我 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.common.HotBitmapGGInfoActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.common.HotBitmapGGInfoActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!-- 全区排行榜界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.home.discover.AllAreasRankActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.home.discover.AllAreasRankActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!-- 全站搜索界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.search.TotalStationSearchActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Search" />
+                android:name="com.hotbitmapgg.bilibili.module.search.TotalStationSearchActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.Search"
+                android:exported="true"/>
 
 
         <!-- 原创排行榜界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.home.discover.OriginalRankActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.home.discover.OriginalRankActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!-- 分季全部新番界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.home.bangumi.SeasonNewBangumiActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.home.bangumi.SeasonNewBangumiActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!--新番连载全部界面-->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.home.bangumi.NewBangumiSerialActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.home.bangumi.NewBangumiSerialActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!-- 番剧详情界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.home.bangumi.BangumiDetailsActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.home.bangumi.BangumiDetailsActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!-- 话题中心界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.home.discover.TopicCenterActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.home.discover.TopicCenterActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!-- 活动中心界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.home.discover.ActivityCenterActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.home.discover.ActivityCenterActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
         <!-- 大会员界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.entry.VipActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.entry.VipActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
         <!--分区直播界面-->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.home.region.LiveAppIndexActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.home.region.LiveAppIndexActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
         <!--分区广告界面-->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.home.region.AdvertisingActivity"
-            android:screenOrientation="portrait" />
+                android:name="com.hotbitmapgg.bilibili.module.home.region.AdvertisingActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"/>
 
 
         <!-- 播放器界面 -->
         <activity
-            android:name="com.hotbitmapgg.bilibili.module.video.VideoPlayerActivity"
-            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
-            android:exported="false"
-            android:label="@string/app_name"
-            android:launchMode="singleTop"
-            android:screenOrientation="landscape"
-            android:theme="@style/ColorTranslucentTheme"
-            android:windowSoftInputMode="stateAlwaysHidden" />
+                android:name="com.hotbitmapgg.bilibili.module.video.VideoPlayerActivity"
+                android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+                android:exported="false"
+                android:label="@string/app_name"
+                android:launchMode="singleTop"
+                android:screenOrientation="landscape"
+                android:theme="@style/ColorTranslucentTheme"
+                android:windowSoftInputMode="stateAlwaysHidden"/>
 
 
     </application>

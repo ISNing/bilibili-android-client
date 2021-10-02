@@ -5,12 +5,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.widget.NestedScrollView;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.core.widget.NestedScrollView;
+import androidx.appcompat.app.ActionBar;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.hotbitmapgg.bilibili.adapter.BangumiDetailsCommentAdapter;
 import com.hotbitmapgg.bilibili.adapter.BangumiDetailsHotCommentAdapter;
 import com.hotbitmapgg.bilibili.adapter.BangumiDetailsRecommendAdapter;
@@ -168,7 +169,7 @@ public class BangumiDetailsActivity extends RxBaseActivity {
         //设置背景高斯模糊图片
         Glide.with(this)
                 .load(result.getCover())
-                .bitmapTransform(new BlurTransformation(this))
+                .apply(RequestOptions.bitmapTransform(new BlurTransformation(25)))
                 .into(mBangumiBackgroundImage);
         //设置番剧标题
         mBangumiTitle.setText(result.getTitle());

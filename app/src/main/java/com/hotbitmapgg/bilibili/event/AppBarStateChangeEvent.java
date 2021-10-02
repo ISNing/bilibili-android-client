@@ -1,6 +1,6 @@
 package com.hotbitmapgg.bilibili.event;
 
-import android.support.design.widget.AppBarLayout;
+import com.google.android.material.appbar.AppBarLayout;
 
 /**
  * Created by hcc on 16/9/20 05:32

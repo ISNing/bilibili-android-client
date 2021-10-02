@@ -1,8 +1,8 @@
 package com.hotbitmapgg.bilibili.adapter.pager;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.hotbitmapgg.bilibili.entity.region.RegionTypesInfo;
 import com.hotbitmapgg.bilibili.module.home.region.RegionTypeDetailsFragment;

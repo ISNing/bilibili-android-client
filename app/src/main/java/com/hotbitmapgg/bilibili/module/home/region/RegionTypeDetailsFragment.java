@@ -1,8 +1,8 @@
 package com.hotbitmapgg.bilibili.module.home.region;
 
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
 import com.hotbitmapgg.bilibili.adapter.section.RegionDetailsHotVideoSection;

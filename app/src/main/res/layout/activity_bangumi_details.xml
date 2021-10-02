@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/nested_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -42,7 +42,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/activity_vertical_margin">
 
-                        <android.support.v7.widget.CardView
+                        <androidx.cardview.widget.CardView
                             android:id="@+id/card_view"
                             android:layout_width="@dimen/bangumi_details_pic_width"
                             android:layout_height="@dimen/bangumi_details_pic_height"
@@ -60,7 +60,7 @@
                                 android:src="@drawable/bili_default_image_tv" />
 
 
-                        </android.support.v7.widget.CardView>
+                        </androidx.cardview.widget.CardView>
 
 
                         <LinearLayout
@@ -215,7 +215,7 @@
                     android:orientation="vertical">
 
 
-                    <android.support.v7.widget.RecyclerView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/bangumi_seasons_recycler"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -255,7 +255,7 @@
                     </RelativeLayout>
 
 
-                    <android.support.v7.widget.RecyclerView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/bangumi_selection_recycler"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -338,7 +338,7 @@
                         android:textSize="@dimen/default_small_text_size" />
 
 
-                    <android.support.v7.widget.RecyclerView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/bangumi_recommend_recycler"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -383,7 +383,7 @@
 
                     </RelativeLayout>
 
-                    <android.support.v7.widget.RecyclerView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/bangumi_comment_recycler"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -408,10 +408,10 @@
         </LinearLayout>
 
 
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

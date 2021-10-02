@@ -3,9 +3,9 @@ package com.hotbitmapgg.bilibili.module.home.region;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.LayoutRes;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 import com.hotbitmapgg.bilibili.adapter.HomeRegionItemAdapter;

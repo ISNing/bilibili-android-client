@@ -4,15 +4,15 @@ Properties props = new Properties()
 props.load(new FileInputStream(file("configuration.properties")))
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdkVersion 30
+    buildToolsVersion '30.0.2'
 
     defaultConfig {
         applicationId "com.hotbitmapgg.ohmybilibili"
         minSdkVersion 21
-        targetSdkVersion 25
+        targetSdkVersion 30
         versionCode props["versionCode"] as int
-        versionName props['versionName']
+        versionName props['versionName'] as String
 
     }
 
@@ -52,52 +52,46 @@ android {
 repositories {
     jcenter()
     google()
-    maven { url "https://jitpack.io" }
     mavenCentral()
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:cardview-v7:27.1.1'
-    implementation 'com.android.support:design:27.1.1'
-    implementation 'org.jsoup:jsoup:1.8.3'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'org.jsoup:jsoup:1.14.2'
     implementation 'com.github.ctiao:DanmakuFlameMaster:0.9.25'
-    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
     implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.0@aar'
     implementation 'com.zhy:flowlayout-lib:1.0.1'
-    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
     implementation 'io.reactivex:rxandroid:1.2.1'
     implementation 'io.reactivex:rxjava:1.3.8'
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava:2.4.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
     implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
     implementation 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.8'
     implementation 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.8'
-    implementation 'com.trello:rxlifecycle-components:0.6.1'
-    implementation 'com.jakewharton.rxbinding:rxbinding:0.4.0'
-    implementation 'com.jakewharton.rxbinding:rxbinding-appcompat-v7:0.3.0'
-    implementation 'com.jakewharton.rxbinding:rxbinding-design:0.3.0'
-    implementation 'com.facebook.stetho:stetho:1.5.0'
-    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+    implementation 'com.trello:rxlifecycle-components:1.0'
+    implementation 'com.jakewharton.rxbinding:rxbinding:1.0.1'
+    implementation 'com.jakewharton.rxbinding:rxbinding-appcompat-v7:1.0.1'
+    implementation 'com.jakewharton.rxbinding:rxbinding-design:1.0.1'
+    implementation 'com.facebook.stetho:stetho:1.6.0'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.6.0'
     implementation 'com.miguelcatalan:materialsearchview:1.4.0'
-    implementation 'jp.wasabeef:glide-transformations:2.0.1'
-    implementation 'com.jakewharton:butterknife:8.4.0'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    implementation 'com.jakewharton:butterknife:10.2.3'
 
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
-    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
 
-    testImplementation 'junit:junit:4.12'
-    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    testImplementation 'junit:junit:4.13.2'
 }
 
-repositories {
-    flatDir {
-        dirs 'libs' //this way we can find the .aar file in libs folder
-    }
-}

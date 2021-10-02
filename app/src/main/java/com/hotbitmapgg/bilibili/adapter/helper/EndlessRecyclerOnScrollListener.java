@@ -1,7 +1,7 @@
 package com.hotbitmapgg.bilibili.adapter.helper;
 
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by hcc on 16/8/7 21:18
